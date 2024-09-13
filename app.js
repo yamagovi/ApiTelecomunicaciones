@@ -29,7 +29,7 @@ router.put('/:id', async (req, res) => {
     const body = req.body;
     const id = req.params.id;
     const respuesta = await ModelUser.findByIdAndUpdate({_id:id},body);
-    res,send(respuesta)
+    res.send(respuesta)
 })
 
 //eliminar

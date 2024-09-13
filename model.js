@@ -1,12 +1,41 @@
 const mongoose = require('mongoose');
 const userModel = new mongoose.Schema(
     {
-        nomuser:{
+        cc:{
+            type: Number
+        },
+        
+        nombre:{
             type: String
         },
-        password:{
+        
+        apellido:{
             type: String
-        }        
+        },
+        
+        direccion:{
+            type: String
+        },
+
+        telefono:{
+            type: Number
+        },
+
+        servicio_solicitado:{
+            type: String
+        },
+
+        num_contrato:{
+            type: Number
+        },
+
+        tecnico_asignado:{
+            type: String
+        },
+        
+        estado:{
+            type: String
+        }
     },
     {
         //para monitorear cuando se hacen cambios en la bd
@@ -15,5 +44,5 @@ const userModel = new mongoose.Schema(
     }
 )
 
-const ModelUser = mongoose.model("usuarios", userModel); //usuarios es el nombre de la colección en la bd
+const ModelUser = mongoose.model("ordenes", userModel); //ordenes es el nombre de la colección en la bd
 module.exports = ModelUser;
